@@ -1,0 +1,6 @@
+{
+  "name": "NEMO",
+  "description": "NEMO - National Emergency Management & Operations platform for real-time disaster response, missing person tracking, and rapid field deployment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
