@@ -1,66 +1,45 @@
-# NEMO - Missing Person Coordination Platform (Crisis Net)
+# NEMO - Missing Person Coordination Platform (Frontend)
 
 > **National Emergency Management & Operations (NEMO)**  
-> 4-tier disaster coordination network architecture for a 6-member team.
+> Emergency Missing-Person & Operations coordination client.
 
 ---
 
-## 📁 Repository & Folder Structure
+## 📁 Repository Structure
 
 ```text
 NEMO/
 │
-├── frontend/                     # [YOUR ROLE] Pure Vanilla HTML, CSS & JS Client
-│   ├── assets/                   # Branding & icons (nemo-emblem.png, nemo-logo.png)
-│   ├── css/                      # Stylesheets
+├── frontend/                     # Pure Vanilla HTML5, CSS3 & JavaScript Client
+│   ├── assets/                   # Branding & logos (nemo-emblem.png, nemo-logo.png)
+│   ├── css/
 │   │   └── style.css             # Glassmorphism, viewport-fixed disaster styling
-│   ├── js/                       # Pure Vanilla JavaScript
+│   ├── js/
 │   │   └── app.js                # State management, reporting forms & AI match desk
 │   └── index.html                # Main application entry point (all 6 screens functional)
 │
-├── backend/                      # [ASSIGNED TO TEAMMATES] FastAPI REST API
-│   ├── routes/
-│   │   ├── missing.py            # [Teammate Task] POST & GET /api/missing
-│   │   ├── found.py              # [Teammate Task] POST & GET /api/found
-│   │   ├── matches.py            # [Teammate Task] POST /api/matches/run, GET /api/matches
-│   │   ├── admin.py              # [Teammate Task] POST /api/admin/verify-match
-│   │   └── __init__.py           # [Teammate Task]
-│   ├── main.py                   # [Teammate Task] FastAPI app & CORS middleware
-│   ├── requirements.txt          # [Teammate Task] Python dependencies
-│   └── __init__.py               # [Teammate Task]
-│
-├── ai-engine/                    # [ASSIGNED TO TEAMMATES] Python AI Matching Engine
-│   ├── matcher.py                # [Teammate Task] RapidFuzz / fuzzy token comparison
-│   ├── scoring.py                # [Teammate Task] Weighted attribute scoring (Name 35%, Location 20%, etc.)
-│   └── __init__.py               # [Teammate Task]
-│
-├── database/                     # [ASSIGNED TO TEAMMATES] PostgreSQL / Supabase
-│   └── schema.sql                # [Teammate Task] Table definitions (missing_persons, found_persons, etc.)
-│
-├── assets/                       # Root static assets & logos
-├── index.html                    # Root launcher (redirects directly to frontend/index.html)
-└── README.md                     # Project architecture & team division of work
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 👥 Team Work Division
+## 🌟 Application Features
 
-- **Frontend (`frontend/`)**: Built and completed with pure HTML5, CSS3, and modern Vanilla JavaScript. Includes Home, Incidents Registry, Report Missing/Found forms, AI Match Desk, About Us, and Contact Us.
-- **Backend (`backend/`)**: Folder and file stubs prepared (blank) for backend teammates.
-- **AI Matching Engine (`ai-engine/`)**: Folder and file stubs prepared (blank) for AI teammates.
-- **Database (`database/`)**: Folder and file stubs prepared (blank) for database teammates.
+- **Home Dashboard**: Live emergency status, real-time alert tickers, key mission statistics, and rapid action triggers.
+- **Incidents Registry**: Searchable emergency reports filterable by disaster type, location, and status.
+- **Report Missing Person**: Multi-attribute intake form including demographics, physical traits, last-known GPS/location, and contact info.
+- **Report Found Person**: Instant check-in desk for shelters and rescue workers to register found persons.
+- **AI Match Desk**: Visual side-by-side comparison engine with confidence percentage, fuzzy match indicators, and verification controls.
+- **About Us & Contact Us**: Team mission statement, contact channels, and emergency helpline details.
 
 ---
 
-## 🚀 Running Your Frontend Work
+## 🚀 How to Run
 
-Double-click or open directly in any browser (Chrome, Edge, Firefox):
+No build tools, npm packages, or local servers are required!
+
+Simply open `frontend/index.html` in your favorite browser (Google Chrome, Microsoft Edge, Mozilla Firefox):
 ```powershell
-Start-Process "chrome.exe" "file:///$((Get-Location).Path)/frontend/index.html"
+Start-Process "frontend/index.html"
 ```
-Or open the root launcher:
-```powershell
-Start-Process "chrome.exe" "file:///$((Get-Location).Path)/index.html"
-```
-Zero build tools, npm packages, or servers required.
